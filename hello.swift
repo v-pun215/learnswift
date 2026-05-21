@@ -1,3 +1,3 @@
-var quote = "Hello world!"
+let quote = "Hello there \" Hello! \""
 
-print(quote)
+print(quote.hasPrefix("Hello "))
