@@ -1,10 +1,11 @@
-var colors = ["red", "green", "blue"]
-let numbers = [1, 2, 3, 4]
-var readings = [0.1, 0.5, 0.8]
+let employee = [
+    "name": "Vihaan",
+    "job": "developer"
+]
 
-print(colors)
-colors.append("purple")
-colors.remove(at:0)
-print(colors.count)
+print(employee["job", default: "unknown"])
 
-print(colors.contains("october"))
+var numbers = Set([1, 1, 3, 4, 5, 5, 2, 1])
+
+print(numbers)
+print(numbers.contains(11))
