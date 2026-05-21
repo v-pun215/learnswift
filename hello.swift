@@ -1,57 +1,25 @@
-let age = 16
-
-if age < 12 {
-    print("thats too bad")
-} else if age < 18 {
-    print("you can vote soon")
-} else {
-    print("go vote!")
-}
-
-let temp = 26
-if temp > 20 && temp < 30 {
-    print("nice day")
-}
-// && is AND and || is OR, similar to c++ (or c)
-enum Weather {
-    case sun, rain, wind
-}
-
-let forecast = Weather.sun
-
-switch forecast {
-case .sun:
-    print("bad day :(")
-case .rain:
-    print("just chillin")
-default:
-    print("cool")
-}
-
-let canVote = age >= 18 ? "Yes": "No" // compact if else
-//similar to c++
-
-let platform = ["iOS", "macOS", "tvOS", "watchOS"]
-for os in platform {
-    print("Swift works on \(os)")
-}
-
-for i in 1...12 { // for i in range(1, 12)
-    print("5 x \(i) is \(5*i)")
-}
-
-var count = 10
-
-while count > 0 {
-    print("\(count)...")
-    count-=1
-}
-print("GO(lang)!")
-
-let files = ["me.jpeg", "work.txt"]
-for file in files {
-    if file.hasSuffix("jpeg") == false {
-        continue
+func printTimesTable(number: Int) {
+    for i in 1...12 {
+        print("\(i) x \(number) = \(i*number)")
     }
-    print("found pic: \(file)")
 }
+
+printTimesTable(number:8)
+
+func rollDice() -> Int {
+    return Int.random(in: 1...6) // alternatively, as we only have one line of code we can remove return entirely
+}
+
+let res = rollDice()
+print(res)
+
+
+func getUser() -> (firstName: String, lastName: String) {
+    (firstName: "Taylor", lastName: "Swift")
+}
+
+let user = getUser()
+let (firstName, _) = user
+print("Name: \(user.firstName) \(user.lastName)")
+
+print("Only first name: \(firstName)")
